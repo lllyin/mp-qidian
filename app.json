@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/publish/index",
+    "pages/me/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "憩点",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"./images/home-grey.png",
+        "selectedIconPath":"./images/home-green.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/publish/index",
+        "iconPath": "./images/edit-grey.png",
+        "selectedIconPath": "./images/edit-green.png",
+        "text": "发布"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "iconPath": "./images/person-grey.png",
+        "selectedIconPath": "./images/person-green.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

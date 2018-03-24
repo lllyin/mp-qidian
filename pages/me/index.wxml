@@ -1,0 +1,53 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-cells__title"></view>
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">头像</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">
+        <image bindtap="bindViewTap" class="weui_avatar" src="{{userInfo.avatarUrl}}" ></image>
+        </view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">昵称</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">{{userInfo.nickName}}</view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">微信号</view>        
+        <view class="weui-cell__ft weui-cell__ft_in-access">{{userInfo.nickName}}</view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">我的二维码</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">我的地址</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+    </view>
+
+    <view class="weui-cells__title"></view>
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">性别</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">{{userInfo.gender===1?"男":"女"}}</view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">地区</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">{{userInfo.city}}</view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">个性签名</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">文艺气息的美男子</view>
+      </navigator>
+    </view>
+   
+   <view class="weui-cells__title"></view>
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">其他功能</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">开发中...</view>
+      </navigator>
+    </view>
+  </view>
+</view>
