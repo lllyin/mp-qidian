@@ -11,9 +11,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userInfo: {},
     title:'',
     content:'',
-    author: 'lyin', 
+    author: 'test', 
+    maxlength:140
   },
   // toast：成功提示
   openToast: function () {
@@ -33,9 +35,12 @@ Page({
   },
   // 文本输入框内容改变
   handleContentChange:function(e){
-    this.setData({
-      content:e.detail.value
-    })
+    console.log(e.detail.value.length)
+    if(e.detail.value.length <= this.data.maxlength){
+      this.setData({
+        content: e.detail.value
+      })
+    }
   },
   // 文本输入框完成
   handleContentConfirm:(content)=>{
@@ -46,7 +51,7 @@ Page({
     const articleData = {
       title:this.data.title,
       content:this.data.content,
-      author: this.data.author,
+      author: this.data.userInfo.nickName,
       create_time: Date.parse(new Date())/1000
     };
     if(!articleData.content){
@@ -80,7 +85,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    console.log(app.globalData.userInfo)
+    this.setData({
+      userInfo: app.globalData.userInfo
+    })
   },
 
   /**

@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/publish/index",
     "pages/me/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/detail/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -17,13 +18,13 @@
         "pagePath": "pages/index/index",
         "iconPath":"./images/home-grey.png",
         "selectedIconPath":"./images/home-green.png",
-        "text": "首页"
+        "text": "记录"
       },
       {
         "pagePath": "pages/publish/index",
         "iconPath": "./images/edit-grey.png",
         "selectedIconPath": "./images/edit-green.png",
-        "text": "发布"
+        "text": "记一笔"
       },
       {
         "pagePath": "pages/me/index",

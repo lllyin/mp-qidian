@@ -1,0 +1,5 @@
+/* pages/detail/index.wxss */
+.record_mark{
+  color:  #999;
+  text-align: right
+}
