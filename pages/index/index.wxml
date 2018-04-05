@@ -15,10 +15,10 @@
       <view class="weui-panel__hd">记录列表</view>
       <view class="weui-panel__bd">
       <!-- 1 start  -->
-        <view class="weui-media-box weui-media-box_text" wx:for="{{articles}}" wx:key="{{_id}}" wx:for-item="item" data-item="{{item}}" id="{{item._id}}"bindtap="bindViewTap">
+        <view class="weui-media-box weui-media-box_text" wx:for="{{articles}}" wx:key="{{_id}}" wx:for-item="item" data-item="{{item}}" id="{{item._id}}" bindtap="bindViewTap">
           <view class="weui-media-box__desc">{{item.content}}</view>
           <view class="weui-media-box__info">
-            <view class="weui-media-box__info__meta">饮食</view>
+            <view class="weui-media-box__info__meta">支出</view>
             <view class="weui-media-box__info__meta">{{item.create_time}}</view>
             <view class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{item.author}}</view>
           </view>

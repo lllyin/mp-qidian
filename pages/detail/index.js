@@ -13,6 +13,36 @@ Page({
    */
   data: {
     article:{}
+    
+  },
+
+  //跳转动评论页面
+  jumpToComment: function (e) {
+    const id = e.currentTarget.id;  //记录ID
+    const replyTo = e.currentTarget.dataset.to;  //评论给谁
+    const type = e.currentTarget.dataset.type;//留言类型：0:评论，1是回复
+    if (replyTo === this.data.userInfo.nickName && parseInt(type,10) === 1){
+      console.log('你不能回复自己');
+      this.openActionSheet();
+    }else{
+      wx.redirectTo({
+        url: `../comment/index?id=${id}&to=${replyTo}&type=${type}`
+      })
+    }
+    console.log("记录e info", e,replyTo,this.data.userInfo.nickName);    
+  },
+
+  // 弹出式菜单，采用小程序原生的actionsheet
+  openActionSheet:function() {
+    wx.showActionSheet({
+      itemList: ['删除(开发中，仅展示)'],
+      itemColor:"#e44445",
+      success: function (res) {
+        if (!res.cancel) {
+          console.log(res.tapIndex)
+        }
+      }
+    });
   },
 
   /**
@@ -45,7 +75,11 @@ Page({
    */
   onLoad: function (options) {
     console.log('article id',options.id)
-    this.getArticle(options.id)
+    this.getArticle(options.id);
+    this.setData({
+      userInfo: app.globalData.userInfo,
+      hasUserInfo: true
+    })
   },
 
   /**

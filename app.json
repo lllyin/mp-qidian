@@ -4,7 +4,8 @@
     "pages/publish/index",
     "pages/me/index",
     "pages/logs/logs",
-    "pages/detail/index"
+    "pages/detail/index",
+    "pages/comment/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

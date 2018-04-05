@@ -3,3 +3,52 @@
   color:  #999;
   text-align: right
 }
+.comment-icon-box{
+  margin-bottom: 45px;
+}
+.comment-icon-box .comment-icon{
+  width: 50rpx;
+  height: 50rpx;
+  float: right;
+  margin-right: 50rpx;
+}
+
+.comments-box{
+  position: relative;
+  padding: 12rpx 0;
+  margin: 0 25rpx;
+  background-color: #f3f3f5;
+  border-radius: 3px;
+}
+.comments-box::before{
+  position: absolute;
+  left: 28rpx;
+  top: -38rpx;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  background: red;
+  border-left:20rpx solid #f8f8f8;
+  border-right:20rpx solid #f8f8f8;
+  border-top:20rpx solid #f8f8f8;
+  border-bottom:20rpx solid #f3f3f5;
+}
+.comments-box .comment-item{
+  color: #111;
+  padding: 3rpx 16rpx;
+  margin-top: 3rpx;  
+  margin-bottom: 3rpx;  
+}
+.comments-box .comment-item:hover{
+  background-color: #cfd1df;
+}
+.comments-box .comment-item .user{
+  color: #586b94;
+  font-weight: 550;
+  margin-right: 5rpx;
+  text-indent: 6px;
+}
+.comments-box .comment-item .content{
+  color: #111;
+}

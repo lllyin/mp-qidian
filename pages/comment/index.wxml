@@ -1,0 +1,16 @@
+<!--pages/publish/index.wxml-->
+<view class='page'>
+  <view class="page__bd">
+    <view class="weui-cells__title">添加备注</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" bindinput="handleContentChange" placeholder="简洁的备注，可以让您不忘记每一笔账来由哦" style="height:4em" value="{{content}}" maxlength="{{maxlength}}" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd_spacing">
+    <button class="weui-btn" type="primary" bindtap="publishComment">提交</button>
+  </view>
+</view>

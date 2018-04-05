@@ -1,23 +1,35 @@
 <!-- 详情页 -->
 
 <view class="page">
-    <view class="page__bd">
-        <view class="weui-article">
-            <view class="weui-article__section">
-                <!-- <view class="weui-article__title">章标题</view> -->
-                <view class="weui-article__section">
-                    <!-- <view class="weui-article__h3">1.1 节标题</view> -->
-                    <view class="weui-article__p">
-                        {{article.content}}
-                    </view>
-                    <view class="record_mark">
-                      {{article.author}}
-                    </view>
-                    <view class="record_mark">
-                     {{article.create_time}}
-                    </view>
-                </view>
-            </view>
+  <view class="page__bd">
+    <view class="weui-article">
+      <view class="weui-article__section">
+        <!-- <view class="weui-article__title">章标题</view> -->
+        <view class="weui-article__section">
+          <!-- <view class="weui-article__h3">1.1 节标题</view> -->
+          <view class="weui-article__p">
+            {{article.content}}
+          </view>
+          <view class="record_mark">
+            {{article.author}}
+          </view>
+          <view class="record_mark">
+            {{article.create_time}}
+          </view>
         </view>
+      </view>
     </view>
+    <view class="comment-icon-box" id="{{article._id}}" data-to="{{article.author}}" data-type="0" bindtap="jumpToComment">
+      <image class="comment-icon" src="../../images/comments.png"></image>
+    </view>
+    <view class="comments-box" wx:if="{{article.comments.length>0}}">
+      <view class="comment-item" wx:for="{{article.comments}}" wx:key="{{create_time}}"  data-item="{{item}}" data-to="{{item.user}}" data-type="1" id="{{article._id}}" bindtap="jumpToComment">
+        <text class="user">{{item.user}}</text>
+        <text wx:if="{{item.type}}">回复</text>
+        <text class="user" wx:if="{{item.type}}">{{item.to}}</text>    
+        :
+        <text class="content">{{item.content}}</text>
+      </view>
+    </view>
+  </view>
 </view>

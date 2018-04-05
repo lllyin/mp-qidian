@@ -33,6 +33,7 @@ Page({
       duration: 3000
     });
   },
+  
   // 文本输入框内容改变
   handleContentChange:function(e){
     console.log(e.detail.value.length)
@@ -42,10 +43,12 @@ Page({
       })
     }
   },
+
   // 文本输入框完成
   handleContentConfirm:(content)=>{
     console.log(content2);
   },
+
   // 发布文章
   publishArticle:function(){
     const articleData = {
